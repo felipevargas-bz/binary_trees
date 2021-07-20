@@ -9,10 +9,9 @@ binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value)
 {
 	binary_tree_t *node = NULL;
 
-	if (parent == NULL || parent->n > value)
-	{
+	if (parent == NULL)
 		return (NULL);
-	}
+
 	node = malloc(sizeof(binary_tree_t));
 	if (!node)
 		return (NULL);
@@ -20,58 +19,20 @@ binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value)
 	if (parent->right == NULL)
 	{
 		node->n = value;
-	    node->parent = parent;
-	    node->left = NULL;
-	    node->right = NULL;
-	    parent->right = node;
+		node->parent = parent;
+		node->left = NULL;
+		node->right = NULL;
+		parent->right = node;
 	}
 	else
 	{
-		if (value < parent->right->n)
-		{
-			node->n = value;
-			node->left = NULL;
-			node->right = parent->right;
-			parent->right->parent = node;
-			node->parent = parent;
-			parent->right = node;
-		}
-		else
-		{
-			node->n = value;
-			node->left = NULL;
-
-			node = insert_node(node, parent->right);
-		}
+		node->n = value;
+		node->parent = parent;
+		node->left = NULL;
+		node->right = parent->right;
+		node->right->parent = node;
+		parent->right = node;
 	}
-	return (node);
-}
-/**
- * insert_node - insert a node if the aux is greter than node
- * @node: node to insert.
- * @parent: parent of node.
- * Return: node.
- */
-binary_tree_t *insert_node(binary_tree_t *node, binary_tree_t *parent)
-{
-	binary_tree_t *aux = parent;
-
-	while (aux->right)
-	{
-		if (aux->n < node->n)
-		{
-			node->parent = aux->parent;
-			aux->parent = node;
-
-			node->parent->right = node;
-			node->right = aux;
-			return (node);
-		}
-		aux = aux->right;
-	}
-	node->parent = aux;
-	aux->right = node;
-	node->right = NULL;
 
 	return (node);
 }
