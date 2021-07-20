@@ -58,7 +58,7 @@ binary_tree_t *insert_node(binary_tree_t *node, binary_tree_t *parent)
 
 	while (aux->right)
 	{
-		if (aux->n < node->n)
+		if (aux->n > node->n)
 		{
 			node->parent = aux->parent;
 			aux->parent = node;
