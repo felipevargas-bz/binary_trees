@@ -1,52 +1,74 @@
-# Higher-level programming - Python, Databases & JavaScript
+# Binary Trees
 
-This repository contains programs written for the higher-level programming
-track at Holberton School. In these projects, which began occurring in month
-four of the year one curriculum, I learned Python, MySQL and JavaScript.
-Simultaneously, I continued to reinforce and expand my skills in C and shell
-scripting. The specific list of projects contained follows:
+---
+## Project Details
 
-* [0x00. Python - Hello, World](./0x00-python-hello_world)
-* [0x01. Python - if/else, loops, functions](./0x01-python-if_else_loops_functions)
-* [0x02. Python - import & modules](./0x02-python-import_modules)
-* [0x03. Python - Data Structures: Lists, Tuples](./0x03-python-data_structures)
-* [0x04. Python - More Data Structures: Set, Dictionary](./0x04-python-more_data_structures)
-* [0x05. Python - Exceptions](./0x05-python-exceptions)
-* [0x06. Python - Classes and Objects](./0x06-python-classes)
-* [0x07. Python - Test-driven development](./0x07-python-test_driven_development)
-* [0x08. Python - More Classes and Objects](./0x08-python-more_classes)
-* [0x09. Python - Everything is object](./0x09-python-everything_is_object)
-* [0x0A. Python - Inheritance](./0x0A-python-inheritance)
-* [0x0B. Python - Input/Output](./0x0B-python-input_output)
-* [0x0C. Python - Almost a circle](./0x0C-python-almost_a_circle)
-* [0x0D. SQL - Introduction](./0x0D-SQL_introduction)
-* [0x0E. SQL - More queries](./0x0E-SQL_more_queries)
-* [0x0F. Python - Object-relational mapping](./0x0F-python-object_relational_mapping)
-* [0x10. Python - Network #0](./0x10-python-network_0)
-* [0x11. Python - Network #1](./0x11-python-network_1)
-* [0x12. Javascript - Warm up](./0x12-javascript-warm_up)
-* [0x13. Javascript - Objects, Scopes and Closures](./0x13-javascript_objects_scopes_closures)
-* [0x14. Javascript - Web scraping](./0x14-javascript-web_scraping)
-* [0x15. Javascript - Web JQuery](./0x15-javascript-web_jquery)
+### Description
+![image](https://www.holbertonschool.com/assets/holberton-logo-1cc451260ca3cd297def53f2250a9794810667c7ca7b5fa5879a569a457bf16f.png)
+Project completed for [Holberton School](https://github.com/holbertonschool/)
 
-## Author :black_nib:
+### What students should learn from this project
+- What is a binary tree
+- What is the difference between a binary tree and a Binary Search Tree
+- What is the possible gain in terms of time complexity compared to linked lists
+- What are the depth, the height, the size of a binary tree
+- What are the different traversal methods to go through a binary tree
+- What is a complete, a full, a perfect, a balanced binary tree
 
-* **Felipe Vargas** <[felipevargas-bz](https://github.com/felipevargas-bz)>
+#### Environment 
+Ubuntu 14.04 LTS
 
-## Acknowledgements :pray:
+## Table of Contents
+* [**Project Requirements**](#project-requirements)
+* [**Project BreakDown**](#project-breakdown)
+* [**Authors**](#authors)
 
-All work contained in this project was completed as part of the curriculum for
-Holberton School. Holberton School is a campus-based full-stack software
-engineering program that prepares students for careers in the tech industry
-using project-based peer learning. For more information, visit
-[this link](https://www.holbertonschool.com/).
 
-<p align="center">
-  <img src="http://www.holbertonschool.com/holberton-logo.png"
-       alt="Holberton School logo"
-  >
-</p>
- avl_t;
+### Project Requirements
+#### Requirements for Python scripts
+- Allowed editors: vi, vim, emacs
+- All your files will be compiled on Ubuntu 14.04 LTS
+- Your programs and functions will be compiled with gcc 4.8.4 using the flags -Wall -Werror -Wextra and -pedantic
+- All your files should end with a new line
+- A README.md file, at the root of the folder of the project, is mandatory
+- Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
+- You are not allowed to use global variables
+- No more than 5 functions per file
+- You are allowed to use the standard library
+- In the following examples, the main.c files are showed as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one showed in the examples
+- The prototypes of all your functions should be included in your header file called binary_trees.h
+- Don’t forget to push your header file
+- All your header files should be include guarded
+
+### Data Structures
+```C
+/**
+ * struct binary_tree_s - Binary tree node
+ *
+ * @n: Integer stored in the node
+ * @parent: Pointer to the parent node
+ * @left: Pointer to the left child node
+ * @right: Pointer to the right child node
+ */
+struct binary_tree_s
+{
+    int n;
+    struct binary_tree_s *parent;
+    struct binary_tree_s *left;
+    struct binary_tree_s *right;
+};
+
+typedef struct binary_tree_s binary_tree_t;
+```
+```C
+Binary Search Tree
+
+typedef struct binary_tree_s bst_t;
+
+
+AVL Tree
+
+typedef struct binary_tree_s avl_t;
 
 Max Binary Heap
 
