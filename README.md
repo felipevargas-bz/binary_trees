@@ -4,8 +4,7 @@
 ## Project Details
 
 ### Description
-![image](https://www.holbertonschool.com/assets/holberton-logo-1cc451260ca3cd297def53f2250a9794810667c7ca7b5fa5879a569a457bf16f.png)
-Project completed for [Holberton School](https://github.com/holbertonschool/)
+Project completed for [Holberton School](https://www.holbertonschool.com/co/es)
 
 ### What students should learn from this project
 - What is a binary tree
